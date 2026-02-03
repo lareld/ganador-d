@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para ti ❤️</title>
+  <style>
+    body {
+      background: linear-gradient(#ff9a9e, #fad0c4);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      width: 320px;
+      position: relative;
+    }
+    h1 {
+      color: #ff3366;
+    }
+    button {
+      margin: 10px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .si {
+      background-color: #ff3366;
+      color: white;
+    }
+    .no {
+      background-color: #ccc;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🎶 Música de fondo -->
+  <audio autoplay loop>
+    <source src="guitarra.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <div class="card">
+    <h1>💘 ¿Quieres ser mi San Valentín? 💘</h1>
+
+    <button class="si" onclick="alert('💖 Sabía que dirías que SÍ 💖')">
+      Sí 💕
+    </button>
+
+    <button class="no" id="noBtn">
+      No 🙈
+    </button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * 200;
+      const y = Math.random() * 150;
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+  </script>
+
+</body>
+</html>
